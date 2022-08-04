@@ -1,11 +1,11 @@
 {
   "name": "Object Hero Fighters",
   "version": "0.0.1",
-  "description": "template webpack et typescript",
+  "description": "Object Hero Fighters",
   "main": "src/index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/labege_carbonne/template-webpack-typescript.git"
+    "url": "https://gitlab.com/adeline64/object-hero-fighters"
   },
   "author": "Philippe Pereira <ppereira.ext@simplon.co>",
   "license": "MIT",
