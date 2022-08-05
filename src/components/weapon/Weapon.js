@@ -1,18 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Weapon = /** @class */ (function () {
-    function Weapon() {
+    function Weapon(name) {
+        this._name = name;
     }
     Object.defineProperty(Weapon.prototype, "name", {
         get: function () {
-            return this.name;
+            return this._name;
         },
         set: function (name) {
             this._name = name;
         },
-        enumerable: true,
+        enumerable: false,
         configurable: true
     });
     return Weapon;
 }());
-exports.Weapon = Weapon;
+exports.default = Weapon;
