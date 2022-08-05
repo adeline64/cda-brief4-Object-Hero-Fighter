@@ -7,65 +7,59 @@ export default class Hero{
     private _weapon:Weapon;
              
 
-constructor(nameHero:string, powerHero:number, lifeHero:number){
-    this._name=nameHero;
-    this._power=powerHero;
-    this._life=lifeHero;
+    constructor(nameHero:string, powerHero:number, lifeHero:number){
+        this._name=nameHero;
+        this._power=powerHero;
+        this._life=lifeHero;
 
-}
-
-
-get name():string{
-    return this._name;
-}
-
-set name(newName:string){
-    this._name=newName;
-}
-
-
-get power():number{
-    return this._power;
-}
-
-set power(newPower:number){
-    this._power=newPower;
-}
-
-get life():number{
-    return this._life;
-}
-
-set life(newlife:number){
-    this._life=newlife;
-}
-
-get weapon():Weapon{
-    return this._weapon;
-}
-
-set weapon(newWeapon:Weapon){
-    this._weapon=newWeapon;
-}
-
-
-
-
-isKO(): boolean {
-    return this._life <= 0;
-}
-
-attack(opponent:Hero) {
-    this._life -= opponent.power;
-}
-
-isAlive(): boolean{
-    if(this._life>0){
-        return true
     }
-    else{
-        return false
-    }
-}
 
+    get name():string{
+        return this._name;
+    }
+
+    set name(newName:string){
+        this._name=newName;
+    }
+
+    get power():number{
+        return this._power;
+    }
+
+    set power(newPower:number){
+        this._power=newPower;
+    }
+
+    get life():number{
+        return this._life;
+    }
+
+    set life(newlife:number){
+        this._life=newlife;
+    }
+
+    get weapon():Weapon{
+        return this._weapon;
+    }
+
+    set weapon(newWeapon:Weapon){
+        this._weapon=newWeapon;
+    }
+
+    isKO(): boolean {
+        return this._life <= 0;
+    }
+
+    attack(opponent:Hero) {
+        this._life -= opponent.power + this._weapon.damage;
+    }
+
+    isAlive(): boolean{
+        if(this._life>0){
+            return true
+        }
+        else{
+            return false
+        }
+    }
 }

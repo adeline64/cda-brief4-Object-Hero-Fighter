@@ -50,7 +50,7 @@ var Hero = /** @class */ (function () {
         return this._life <= 0;
     };
     Hero.prototype.attack = function (opponent) {
-        this._life -= opponent.power;
+        this._life -= opponent.power + this._weapon.damage;
     };
     Hero.prototype.isAlive = function () {
         if (this._life > 0) {

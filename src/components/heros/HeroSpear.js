@@ -16,16 +16,22 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var Hero_1 = require("./Hero");
+var HeroAxe_1 = require("./HeroAxe");
 var Weapon_1 = require("../weapon/Weapon");
 var HeroSpear = /** @class */ (function (_super) {
     __extends(HeroSpear, _super);
-    // private _weapon : Weapon;
     function HeroSpear(nameHero, powerHero, lifeHero) {
         var _this = _super.call(this, nameHero, powerHero, lifeHero) || this;
-        _this.weapon = new Weapon_1.default("spear");
+        _this.weapon = new Weapon_1.default("Spear", 15);
         return _this;
     }
-    HeroSpear.prototype.attack = function () {
+    HeroSpear.prototype.attack = function (opponent) {
+        if (opponent instanceof HeroAxe_1.default) {
+            this.life -= opponent.power * 2;
+        }
+        else {
+            _super.prototype.attack.call(this, opponent);
+        }
     };
     return HeroSpear;
 }(Hero_1.default));

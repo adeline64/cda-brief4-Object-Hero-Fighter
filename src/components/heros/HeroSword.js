@@ -15,12 +15,15 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
+var Weapon_1 = require("../weapon/Weapon");
 var Hero_1 = require("./Hero");
 var HeroSpear_1 = require("./HeroSpear");
 var HeroSword = /** @class */ (function (_super) {
     __extends(HeroSword, _super);
-    function HeroSword() {
-        return _super !== null && _super.apply(this, arguments) || this;
+    function HeroSword(nameHero, powerHero, lifeHero) {
+        var _this = _super.call(this, nameHero, powerHero, lifeHero) || this;
+        _this.weapon = new Weapon_1.default("Sword", 10);
+        return _this;
     }
     HeroSword.prototype.attack = function (opponent) {
         if (opponent instanceof HeroSpear_1.default) {
