@@ -1,8 +1,8 @@
 export default class Hero{
 
     private _name:string;
-             power:number;
-             life:number;
+    private  power:number;
+    private  life:number;
              
 
 constructor(nameHero:string, powerHero:number, lifeHero:number){
@@ -24,17 +24,17 @@ set name(newName:string){
 
 isKO(): boolean {
     return this.life <= 0;
-  }
+}
 
 attack(opponent:Hero) {
     this.life -= opponent.power;
-  }
+}
 
 isAlive(): boolean{
-if(this.life>0)
-return true
-else
-return false
+    if(this.life>0)
+    return true
+    else
+    return false
 }
 
 }
