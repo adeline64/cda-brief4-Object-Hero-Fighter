@@ -47,13 +47,13 @@ var Hero = /** @class */ (function () {
         configurable: true
     });
     Hero.prototype.isKO = function () {
-        return this.life <= 0;
+        return this._life <= 0;
     };
     Hero.prototype.attack = function (opponent) {
-        this.life -= opponent.power;
+        this._life -= opponent.power;
     };
     Hero.prototype.isAlive = function () {
-        if (this.life > 0) {
+        if (this._life > 0) {
             return true;
         }
         else {
