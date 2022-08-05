@@ -1,4 +1,4 @@
-export class Weapon {
+export default class Weapon {
 
  private _name: string;
 
