@@ -1,4 +1,4 @@
-export default class HeroAxe {
+export default class HeroSword {
     constructor() {
         
     }
