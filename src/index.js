@@ -10,14 +10,14 @@ battle(heroAxe, heroSpear);
 battle(heroSword, heroAxe);
 battle(heroSpear, heroSword);
 function battle(hero, opponent) {
-    while (hero.life > 0 || opponent.life > 0) {
+    while (hero.isAlive() || opponent.isAlive()) {
         hero.attack(opponent);
         opponent.attack(hero);
     }
-    if (hero.life <= 0) {
+    if (hero.isKO) {
         console.log(opponent.name + " wins");
     }
-    else if (opponent.life <= 0) {
+    else if (opponent.isKO) {
         console.log(hero.name + " wins");
     }
     else {

@@ -55,10 +55,9 @@ export default class Hero{
     }
 
     isAlive(): boolean{
-        if(this._life>0){
+        if(this._life > 0){
             return true
-        }
-        else{
+        } else {
             return false
         }
     }
