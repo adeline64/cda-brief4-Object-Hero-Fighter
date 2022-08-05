@@ -52,15 +52,15 @@ set weapon(newWeapon:Weapon){
 
 
 isKO(): boolean {
-    return this.life <= 0;
+    return this._life <= 0;
 }
 
 attack(opponent:Hero) {
-    this.life -= opponent.power;
+    this._life -= opponent.power;
 }
 
 isAlive(): boolean{
-    if(this.life>0){
+    if(this._life>0){
         return true
     }
     else{
