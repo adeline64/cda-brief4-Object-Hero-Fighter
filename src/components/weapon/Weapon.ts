@@ -3,7 +3,7 @@ export default class Weapon {
  private _name: string;
 
   constructor(name : string) {
-    this.name = name;
+    this._name = name;
   }
 
   get name() : string {
